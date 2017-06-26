@@ -8,6 +8,10 @@ import muiThemeable from 'material-ui/styles/muiThemeable';
 
 // From App
 import App from '../App';
+import ChallengeOne from '../Challenges/1-challenge';
+import ChallengeTwo from '../Challenges/2-challenge';
+import ChallengeThree from '../Challenges/3-challenge';
+import ChallengeFour from '../Challenges/4-challenge';
 
 // Import some examples from material-ui
 import AppBar from 'material-ui/AppBar';
@@ -55,9 +59,6 @@ import CardExampleControlled from './CardExampleControlled';
 import FlatButtonExampleSimple from './FlatButtonExampleSimple';
 import RaisedButtonExampleSimple from './RaisedButtonExampleSimple';
 import DatePickerExampleSimple from './DatePickerExampleSimple';
-import ChallengeOne from './ChallengeOne';
-import ChallengeTwo from './ChallengeTwo';
-import ChallengeThree from './ChallengeThree';
 
 import customTheme from '../custom-material-design-theme';
 
@@ -91,7 +92,8 @@ storiesOf('Programming Challenge', module)
   .addDecorator(withKnobs)
   .add('Challenge #1', () => <ChallengeOne />)
   .add('Challenge #2', () => <ChallengeTwo />)
-  .add('Challenge #3', () => <ChallengeThree />);
+  .add('Challenge #3', () => <ChallengeThree />)
+  .add('Challenge #4', () => <ChallengeFour />);
 
 storiesOf('Material-UI', module)
   .addDecorator(centered)
