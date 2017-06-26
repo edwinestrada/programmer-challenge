@@ -10,24 +10,22 @@ let paperStyle = {
 export default () => (
   <div>
     <Paper zDepth={1} style={paperStyle}>
-      <p style={{width: 300}}>
-        We're writing a "Current Open Tickets" report for a ticketing system that tracks Tickets and their Status changes in two separate tables.
-      </p>
-      <p style={{width: 300}}>
-        Write a SQL statement using the two tables below that returns every open ticket (latest status is not Closed) from the "Ticket" table with its current status (status with the latest timestamp) from the "StatusChange" table.
-      </p>
-    </Paper>
-    <Paper zDepth={1} style={paperStyle}>
-      <p style={{width: 300}}>
+      <pre style={{fontSize: 13}}>
         SELECT Id, Summary, NewStatus<br/>
         FROM Tickets<br/>
         INNER JOIN (<br/>
+        <span style={{paddingLeft: 16}}>
           SELECT TicketId, NewStatus, MAX(Timestamp) as maxTimestamp<br/>
+        </span>
+        <span style={{paddingLeft: 16}}>
           FROM StatusChanges<br/>
+        </span>
+        <span style={{paddingLeft: 16}}>
           GROUP BY TicketId<br/>
-        ) tm ON Tickets.Id=tm.TicketId<br/>
+        </span>
+        ) t ON Tickets.Id=t.TicketId<br/>
         WHERE NOT NewStatus='Closed';<br/>
-      </p>
+      </pre>
     </Paper>
   </div>
 );

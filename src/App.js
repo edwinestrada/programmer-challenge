@@ -25,7 +25,7 @@ class App extends Component {
 
     this.state = {
       open: true,
-      tabOpen: 1,
+      tabOpen: 3,
       content: null
     };
 
@@ -77,10 +77,14 @@ class App extends Component {
       case 3:
         return (
           <div>
-            <h2 className='article-title'>Counting strings in a string</h2>
+            <h2 className='article-title'>Getting tickets with SQL</h2>
             <div className='left-col'>
-              <p>Write a method that takes two strings and determines how many times the 2nd string occurs in the first.</p>
-              <p>For example, if the input strings are "swordfishtrombonesbabyfishmouth" and "fish", then the output would be 2.</p>
+              <p>
+                We're writing a "Current Open Tickets" report for a ticketing system that tracks Tickets and their Status changes in two separate tables.
+              </p>
+              <p>
+                Write a SQL statement using the two tables below that returns every open ticket (latest status is not Closed) from the "Ticket" table with its current status (status with the latest timestamp) from the "StatusChange" table.
+              </p>
             </div>
             <div className='right-col'>
               <ChallengeThree />
@@ -90,10 +94,28 @@ class App extends Component {
       case 4:
         return (
           <div>
-            <h2 className='article-title'>Counting strings in a string</h2>
+            <h2 className='article-title'>Table from an array of arrays</h2>
             <div className='left-col'>
-              <p>Write a method that takes two strings and determines how many times the 2nd string occurs in the first.</p>
-              <p>For example, if the input strings are "swordfishtrombonesbabyfishmouth" and "fish", then the output would be 2.</p>
+              <p>Create a snippet of HTML and javascript to display a column chart of the values below.</p>
+              <p>Feel free to use external charting libraries.</p>
+              <p>
+                var rawData = [<br />
+                <span style={{paddingLeft: 16}}>
+                /* year, sales, expenses */<br />
+                </span>
+                <span style={{paddingLeft: 16}}>
+                ['2004', 1000, 400],<br />
+                </span>
+                <span style={{paddingLeft: 16}}>
+                ['2005', 1170, 460],<br />
+                </span>
+                <span style={{paddingLeft: 16}}>
+                ['2006', 660, 1120],<br />
+                </span>
+                <span style={{paddingLeft: 16}}>
+                ['2007', 1030, 540]<br />
+                </span>
+              ];</p>
             </div>
             <div className='right-col'>
               <ChallengeFour />
