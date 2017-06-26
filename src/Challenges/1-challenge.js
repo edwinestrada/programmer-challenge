@@ -5,6 +5,8 @@ import TextField from 'material-ui/TextField';
 
 let paperStyle = {
   padding: 48,
+  float: 'left',
+  width: '100%',
 };
 
 export default class ChallengeOne extends React.Component {
@@ -51,21 +53,25 @@ export default class ChallengeOne extends React.Component {
     return (
       <div>
         <Paper zDepth={1} style={paperStyle}>
-          <TextField
-            hintText="type 1st string here"
-            value={this.state.firstString}
-            onChange={this.handleChangeFirstString.bind(this)}
-            floatingLabelText="First String"
-            floatingLabelFixed={true}
-          /><br />
-          <TextField
-            hintText="type 2nd string here"
-            value={this.state.secondString}
-            onChange={this.handleChangeSecondString.bind(this)}
-            floatingLabelText="Second String"
-            floatingLabelFixed={true}
-          /><br /><br />
-          {this.combineStrings()}
+          <div style={{width: '50%', float: 'left'}}>
+            <TextField
+              hintText="type 1st string here"
+              value={this.state.firstString}
+              onChange={this.handleChangeFirstString.bind(this)}
+              floatingLabelText="First String"
+              floatingLabelFixed={true}
+            />
+          </div>
+          <div style={{width: '50%', float: 'left'}}>
+            <TextField
+              hintText="type 2nd string here"
+              value={this.state.secondString}
+              onChange={this.handleChangeSecondString.bind(this)}
+              floatingLabelText="Second String"
+              floatingLabelFixed={true}
+            />
+          </div>
+          <h3>{this.combineStrings()}</h3>
         </Paper>
       </div>
     );

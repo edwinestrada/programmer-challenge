@@ -5,6 +5,8 @@ import TextField from 'material-ui/TextField';
 
 let paperStyle = {
   padding: 48,
+  float: 'left',
+  width: '100%',
 };
 
 export default class ChallengeTwo extends React.Component {
@@ -50,32 +52,28 @@ export default class ChallengeTwo extends React.Component {
 
   render() {
     return (
-
       <div>
         <Paper zDepth={1} style={paperStyle}>
-          <p style={{width: 300}}>Write a method that takes two strings and determines how many times the 2nd string occurs in the first.</p>
-          <p style={{width: 300}}>For example, if the input strings are "swordfishtrombonesbabyfishmouth" and "fish", then the output would be 2.</p>
-        </Paper>
-        <Paper zDepth={1} style={paperStyle}>
-          <TextField
-            hintText="type string to search here"
-            value={this.state.firstString}
-            onChange={this.handleChangeFirstString.bind(this)}
-            floatingLabelText="String you'd like to search"
-            floatingLabelFixed={true}
-          /><br />
-        </Paper>
-        <Paper zDepth={1} style={paperStyle}>
-          <TextField
-            hintText="type string to search for"
-            value={this.state.secondString}
-            onChange={this.handleChangeSecondString.bind(this)}
-            floatingLabelText="String you'd like to find"
-            floatingLabelFixed={true}
-          /><br />
-        </Paper>
-        <Paper zDepth={1} style={paperStyle}>
-          {this.state.outputString}
+          <div style={{width: '50%', float: 'left'}}>
+            <TextField
+              hintText="type string to search here"
+              value={this.state.firstString}
+              onChange={this.handleChangeFirstString.bind(this)}
+              floatingLabelText="String you'd like to search"
+              floatingLabelFixed={true}
+              multiLine={true}
+          />
+          </div>
+          <div style={{width: '50%', float: 'left'}}>
+            <TextField
+              hintText="type string to search for"
+              value={this.state.secondString}
+              onChange={this.handleChangeSecondString.bind(this)}
+              floatingLabelText="String you'd like to find"
+              floatingLabelFixed={true}
+            />
+          </div>
+          <h3>{this.state.secondString ? this.state.secondString + ' x ' : null} {this.state.outputString}</h3>
         </Paper>
       </div>
     );

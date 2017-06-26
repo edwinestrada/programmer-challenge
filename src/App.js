@@ -63,17 +63,42 @@ class App extends Component {
         );
       case 2:
         return (
-          <ChallengeTwo />
+          <div>
+            <h2 className='article-title'>Counting strings in a string</h2>
+            <div className='left-col'>
+              <p>Write a method that takes two strings and determines how many times the 2nd string occurs in the first.</p>
+              <p>For example, if the input strings are "swordfishtrombonesbabyfishmouth" and "fish", then the output would be 2.</p>
+            </div>
+            <div className='right-col'>
+              <ChallengeTwo />
+            </div>
+          </div>
         );
       case 3:
         return (
-          <ChallengeThree />
+          <div>
+            <h2 className='article-title'>Counting strings in a string</h2>
+            <div className='left-col'>
+              <p>Write a method that takes two strings and determines how many times the 2nd string occurs in the first.</p>
+              <p>For example, if the input strings are "swordfishtrombonesbabyfishmouth" and "fish", then the output would be 2.</p>
+            </div>
+            <div className='right-col'>
+              <ChallengeThree />
+            </div>
+          </div>
         );
       case 4:
         return (
-          <Paper zDepth={1}>
-            <ChallengeFour />
-          </Paper>
+          <div>
+            <h2 className='article-title'>Counting strings in a string</h2>
+            <div className='left-col'>
+              <p>Write a method that takes two strings and determines how many times the 2nd string occurs in the first.</p>
+              <p>For example, if the input strings are "swordfishtrombonesbabyfishmouth" and "fish", then the output would be 2.</p>
+            </div>
+            <div className='right-col'>
+              <ChallengeFour />
+            </div>
+          </div>
         );
       default:
         return <h1>Pick one</h1>;
