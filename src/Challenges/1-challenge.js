@@ -49,12 +49,7 @@ export default class ChallengeOne extends React.Component {
 
   render() {
     return (
-
       <div>
-        <Paper zDepth={1} style={paperStyle}>
-          <p style={{width: 300}}>Write a function that accepts two strings and outputs an interleaved result made up of alternating letters from each input string.</p>
-          <p style={{width: 300}}>For example, if the input strings are "super" and "54321", then the output would be "s5u4p3e2r1".</p>
-        </Paper>
         <Paper zDepth={1} style={paperStyle}>
           <TextField
             hintText="type 1st string here"
@@ -63,17 +58,13 @@ export default class ChallengeOne extends React.Component {
             floatingLabelText="First String"
             floatingLabelFixed={true}
           /><br />
-        </Paper>
-        <Paper zDepth={1} style={paperStyle}>
           <TextField
             hintText="type 2nd string here"
             value={this.state.secondString}
             onChange={this.handleChangeSecondString.bind(this)}
             floatingLabelText="Second String"
             floatingLabelFixed={true}
-          /><br />
-        </Paper>
-        <Paper zDepth={1} style={paperStyle}>
+          /><br /><br />
           {this.combineStrings()}
         </Paper>
       </div>

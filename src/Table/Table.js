@@ -1,27 +1,45 @@
 import React from 'react';
 import './Table.css';
-import Row from './Row';
 
-export default class Table extends React.Component {
+import {
+  Table,
+  TableBody,
+  TableHeader,
+  TableHeaderColumn,
+  TableRow,
+  TableRowColumn,
+} from 'material-ui/Table';
+
+export default class MyTable extends React.Component {
   constructor(props, context){
     super(props, context);
     this.state = {};
   }
 
   renderRows = (rowsData) => {
-    return rowsData.map((row, index) => <Row key={index} row={row} />);
+    return rowsData.map((row, index) => {
+      return (
+        <TableRow key={index}>
+          <TableRowColumn>{row[0]}</TableRowColumn>
+          <TableRowColumn>{row[1]}</TableRowColumn>
+          <TableRowColumn>{row[2]}</TableRowColumn>
+        </TableRow>
+      );
+    });
   };
 
   render() {
     return (
-      <div className="table-container">
-        <div className="table-header">
-          <div className="table-cell with-padding">Year</div>
-          <div className="table-cell with-padding">Sales</div>
-          <div className="table-cell with-padding">Expenses</div>
-        </div>
-        <div className="table-body">{this.renderRows(this.props.rowsData)}</div>
-      </div>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderColumn>Year</TableHeaderColumn>
+            <TableHeaderColumn>Sales</TableHeaderColumn>
+            <TableHeaderColumn>Expenses</TableHeaderColumn>
+          </TableRow>
+        </TableHeader>
+        <TableBody displayRowCheckbox={false}>{this.renderRows(this.props.rowsData)}</TableBody>
+      </Table>
     );
   }
 };

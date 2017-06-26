@@ -1,8 +1,8 @@
 export default {
   themeName: "Custom Theme",
   palette: {
-    primary1Color: "#ED1662",
-    primary2Color: "#E1E1E1",
+    primary1Color: "#A1DB83",
+    primary2Color: "#2C88FB",
   },
   raisedButton: {
     textColor: "#ED1662",
