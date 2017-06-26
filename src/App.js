@@ -25,7 +25,7 @@ class App extends Component {
 
     this.state = {
       open: true,
-      tabOpen: 3,
+      tabOpen: 1,
       content: null
     };
 

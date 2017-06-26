@@ -1,5 +1,12 @@
 import React from 'react';
 import Table from '../Table/Table';
+import Paper from 'material-ui/Paper';
+
+let paperStyle = {
+  padding: 48,
+  float: 'left',
+  width: '100%',
+};
 
 var rawData = [
   /* year, sales, expenses */
@@ -22,6 +29,10 @@ export default class ChallengeFour extends React.Component {
   }
 
   render() {
-    return <Table rowsData={this.state.rawData} />;
+    return (
+      <Paper zDepth={1} style={paperStyle}>
+        <Table rowsData={this.state.rawData} />
+      </Paper>
+    );
   }
 }
