@@ -6,7 +6,6 @@ import customTheme from './custom-material-design-theme';
 
 import './App.css';
 import AppBar from 'material-ui/AppBar';
-import Paper from 'material-ui/Paper';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import MergeIcon from 'material-ui/svg-icons/communication/call-merge';
@@ -100,9 +99,6 @@ class App extends Component {
               <p>Feel free to use external charting libraries.</p>
               <p>
                 var rawData = [<br />
-                <span style={{paddingLeft: 16}}>
-                /* year, sales, expenses */<br />
-                </span>
                 <span style={{paddingLeft: 16}}>
                 ['2004', 1000, 400],<br />
                 </span>
