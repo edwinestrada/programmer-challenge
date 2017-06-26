@@ -57,6 +57,7 @@ import RaisedButtonExampleSimple from './RaisedButtonExampleSimple';
 import DatePickerExampleSimple from './DatePickerExampleSimple';
 import ChallengeOne from './ChallengeOne';
 import ChallengeTwo from './ChallengeTwo';
+import ChallengeThree from './ChallengeThree';
 
 import customTheme from '../custom-material-design-theme';
 
@@ -85,11 +86,12 @@ storiesOf('Welcome', module)
   .add('actual App', () => <App />);
 
 storiesOf('Programming Challenge', module)
-  .addDecorator(muiTheme([customTheme]))
   .addDecorator(centered)
+  .addDecorator(muiTheme([customTheme]))
   .addDecorator(withKnobs)
   .add('Challenge #1', () => <ChallengeOne />)
-  .add('Challenge #2', () => <ChallengeTwo />);
+  .add('Challenge #2', () => <ChallengeTwo />)
+  .add('Challenge #3', () => <ChallengeThree />);
 
 storiesOf('Material-UI', module)
   .addDecorator(centered)
